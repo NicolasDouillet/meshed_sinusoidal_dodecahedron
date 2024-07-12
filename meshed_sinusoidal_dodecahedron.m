@@ -2,7 +2,7 @@ function [V, T] = meshed_sinusoidal_dodecahedron(sampling, w, option_display)
 %% meshed_sinusoidal_dodecahedron : function to compute, mesh, display
 % and save a meshed sinusoidal dodecaahedron.
 %
-% Author & support : nicolas.douillet (at) free.fr 2020.
+% Author : nicolas.douillet (at) free.fr 2016-2024.
 %
 %
 % Syntax
@@ -227,7 +227,7 @@ V = [X Y Z];
 
 for i = 1:size(V,1)
     
-    radius = sqrt(sum(V(i,:).^2));
+    radius = vecnorm(V(i,:)');
     
     if radius ~= 1
         V(i,:) = V(i,:) / radius;
@@ -274,7 +274,7 @@ V(f,:) = N;
 TRI = triangulation(T, V(:,1), V(:,2), V(:,3));
 
 
-% Display
+%% Display
 if option_display 
     
     figure;
@@ -295,7 +295,7 @@ end % meshed_sinusoidal_dodecahedron
 function [V0, min_dst] = closest_vertex(Point,V)
 
 
-dst_vect = sqrt(sum((V-repmat(Point, [1,size(V,2)])).^2,1));
+dst_vect = vecnorm(V-repmat(Point, [1,size(V,2)]));
 
 f = find(dst_vect == min(dst_vect));
 min_dst = dst_vect(f(1));

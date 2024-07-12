@@ -3,7 +3,7 @@
 % Function to compute, mesh, display and
 % save a meshed sinusoidal dodecahedron.
 %
-% Author & support : nicolas.douillet (at) free.fr 2020.
+% Author : nicolas.douillet (at) free.fr 2020-2024.
 %
 %% Syntax
 %
