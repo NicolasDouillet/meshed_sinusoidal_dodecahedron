@@ -2,7 +2,7 @@ function [V, T] = meshed_sinusoidal_dodecahedron(sampling, w, option_display)
 %% meshed_sinusoidal_dodecahedron : function to compute, mesh, display
 % and save a meshed sinusoidal dodecaahedron.
 %
-% Author : nicolas.douillet (at) free.fr 2016-2024.
+% Author : nicolas.douillet9 (at) gmail.com, 2016-2024.
 %
 %
 % Syntax
